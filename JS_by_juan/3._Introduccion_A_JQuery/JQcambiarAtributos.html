@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .linkdestacacursos{
+            /*background-color: aqua;*/
+            color: #F00;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        #myhead{
+            background-color: red;
+            width: 980px;
+            margin: auto;
+            display: flex;
+            
+        }
+        #curso{
+            padding-top: 10px;
+            padding-left: 35px;
+        }
+        #informacion{
+            padding: 10px;
+            margin-left: 480px
+            
+        }
+        #mylist{
+            margin-top: 50px;
+        }
+        a{
+            font-size: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$("a[href^='http://']").addClass("linkdestacacursos");
+            document.getElementById("botoncursos").addEventListener("click", resaltacursos, false);
+            document.getElementById("botoninformacion").addEventListener("click", resaltaejemplos, false);
+        });
+        function resaltacursos(){
+            $(".ejemplos").removeClass("linkdestacacursos");
+            $(".cursos").addClass("linkdestacacursos");
+
+            //$(".cursos").toggleClass("linkdestacacursos");
+        }
+        function resaltaejemplos(){
+            $(".cursos").removeClass("linkdestacacursos")
+            $(".ejemplos").addClass("linkdestacacursos");
+
+            //$(".ejemplos").toggleClass("linkdestacacursos");
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="myhead">
+        <div id="curso">
+            Cursos Destacados <input type="radio" name="miboton" value="Cursos" id="botoncursos">
+        </div>
+        <div id="informacion">
+            Informacion adicional <input type="radio" name="miboton" value="informacion" id="botoninformacion">
+        </div>
+    </div>
+    <div id="mylist">
+        <a href="http://pildorasinformaticas.com" class="cursos">Pildoras Informáticas</a></br></br>
+        <a href="https://www.google.com" class="ejemplos">Google</a></br></br>
+        <a href="http://youtube.pildorasinformaticas.es" class="cursos">Pildoras Informáticas YouTube</a></br></br>
+        <a href="/3._Introduccion_A_JQuery/myJQ5.html">Remover y reemplazar</a></br></br>
+        <a href="https://noticias.com" class="ejemplos">Noticias google</a></br></br>
+        <a href="/practicas/calculadora/calculadora_eventos.html">Calculadora</a></br></br>
+    </div>
+</body>
+</html>

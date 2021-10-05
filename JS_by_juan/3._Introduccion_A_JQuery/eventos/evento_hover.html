@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Documento sin título</title>
+		<style>
+
+			#imagenes{
+				width:1375px;
+				margin:auto;
+				
+			}
+			img{
+				width: 20%;
+				padding:20px 30px;
+			}
+
+			#mensaje_img1 {
+				position: absolute;
+				left: 450px;
+				top: 300px;
+				width: 581px;
+				height: 215px;
+				background-color: #FF9;
+				font-size: 24px;
+				font-weight: bold;
+				padding: 25px;
+				border: dotted 2px #00F;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#mensaje_img1").hide(2000);
+				//$("#imagen1").hover(mensaje_on, mensaje_off);
+				$("#imagen1").hover(function(){
+					$("#mensaje_img1").show(1000);
+				},
+				function(){
+					$("#mensaje_img1").hide(1000);
+				});
+
+			});
+
+			/*function mensaje_on(){
+				$("#mensaje_img1").show(2000);
+			}
+
+			function mensaje_off(){
+				$("#mensaje_img1").hide();
+			}*/
+
+		</script>
+	</head>
+	<body>
+		<div id="mensaje_img1">Preciosa encina en mitad de la meseta castellana......</div>
+		<div id="imagenes">
+			<img src="/imageLF/paisaje2.jpg" id="imagen1">
+			<img src="/imageLF/paisaje3.jpg" id="imagen2">
+			<img src="/imageLF/paisaje4.jpg" id="imagen3">
+			<img src="/imageLF/paisaje5.jpg" id="imagen4">
+		</div>
+	</body>
+</html>

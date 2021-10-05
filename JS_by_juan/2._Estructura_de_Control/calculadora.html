@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = (prompt("Introduce el primer número"));
+        var num2 = (prompt("Introduce el segundo número"));
+
+        if(!isNaN(num1) && !isNaN(num2)){//!expresa lo contrario de lo que hay a continuación
+            var operacion = prompt("Qué operación deseas realizar? suma/resta/multiplicación/División").toLowerCase();
+            var num1 = parseInt(num1);
+            var num2 = parseInt(num2);
+            
+            if(operacion == "suma"){
+                alert(num1 + num2);
+            }
+            else if(operacion == "resta"){
+                alert(num1 - num2)
+            }
+            else if(operacion == "multiplicacion" || operacion == "multiplicación"){
+                alert(num1 * num2)
+            }
+            else if(operacion == "division" || operacion == "división"){
+                alert(num1 / num2)
+            }
+            else{
+                alert("operación no permitida")
+            }
+        }
+        else{
+            if(typeof(num1) == "string" || typeof(num2) == "string"){
+                alert("Valores no permitidos")
+            }
+            else{
+                alert("Ha ocurido un error")
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

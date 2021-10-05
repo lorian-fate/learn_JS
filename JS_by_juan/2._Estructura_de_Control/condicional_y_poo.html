@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Documento sin título</title>
+
+    <style>
+
+    table{
+      margin:auto;
+    }
+
+
+    </style>
+
+
+  </head>
+
+  <body id="cuerpo">
+    <form name="form1" method="post" action="" id="miformulario">
+      <table width="25%" border="1" id="mitabla">
+        <tr>
+          <td>Nombre:</td>
+          <td><label for="textfield"></label>
+          <input type="text" name="textfield" id="textfield"></td>
+        </tr>
+        <tr>
+          <td>Apellidos:</td>
+          <td><input type="text" name="textfield2" id="textfield2"></td>
+        </tr>
+        <tr>
+          <td>Edad:</td>
+          <td><input type="text" name="textfield3" id="textfield3"></td>
+        </tr>
+        <tr>
+          <td>Carnet:</td>
+          <td><input type="text" name="textfield4" id="textfield4"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="button" id="button" value="Enviar"></td>
+          <td><input type="reset" name="button2" id="button2" value="Restablecer"></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      var cuerpo = document.getElementById("cuerpo");
+      var colorWeb = prompt("Introduce el color de fondo. Azul/Verde/Rojo").toUpperCase();
+
+      if(colorWeb != "AZUL" && colorWeb != "VERDE" && colorWeb != "ROJO"){
+        alert("Ese color no está contemplado")
+      }
+      else if(colorWeb == "AZUL"){
+        cuerpo.style.background = "#54ECF2";
+      }
+      else if(colorWeb == "VERDE"){
+        cuerpo.style.background = "#9EFF69";
+      }
+      else if(colorWeb == "ROJO"){
+        cuerpo.style.background = "#FF6F6F";
+      }
+
+      /*if(colorWeb == "AZUL"){
+        cuerpo.style.background = "#54ECF2";
+
+      }
+      else if(colorWeb == "VERDE"){
+        cuerpo.style.background = "#9EFF69";
+
+      }
+      else if(colorWeb == "ROJO"){
+        cuerpo.style.background = "#FF6F6F";
+
+      }
+      else{
+        alert("este color no está permitido")
+      }*/
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(34, 34, 92);
+            color: #FFF;
+        }
+        h1{
+            text-align: center;
+        }
+        
+        #principal{
+            width: 60%;
+            margin: auto;
+        }
+        a{
+            color: #FFF;
+            font: bold 20px Verdana, Geneva, sans-serif;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("html").dblclick(function(){
+                alert("GOD!!!");
+            });
+            $("a").mouseover(function(){
+                var mensaje = "<p>Estás pasando el ratón por encima del link</p>";
+                $("#principal").append(mensaje);
+            });
+
+            $("#el_boton").click(function(){
+                $(this).val("otro click");
+            });
+
+            $("#el_campo").focus(function(){
+                $(this).val("Ahora escribe aquí");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="principal">
+        <h1>Introducción a eventos</h1>
+        <p><a href="">Un link</a></p>
+        <form action="" method="get">
+            <fieldset><legend>Formulario</legend>
+                <p><input type="button" value="Un boton" id="el_boton"></p>
+                <p><input type="text" name="textfield" id="el_campo"></p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

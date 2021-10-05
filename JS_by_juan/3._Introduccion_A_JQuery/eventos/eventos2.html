@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="eventos2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$("#submenu1").hide();
+            //$("#archivo").toggle(muestra_menu, oculta_menu);
+            
+            $("#archivo").click(function(){
+                $("#submenu1").hide();
+                })
+                
+
+        });
+        
+        /*function muestra_menu(){
+            $("#submenu1").show();
+        }
+
+        function oculta_menu(){
+            $("#submenu1").hide();
+        }*/
+
+    </script>
+</head>
+<body>
+    <div id="submenu1">
+        <ul>
+            <li id="option1"><a href="">opcion 1</a></li>
+            <li id="option2"><a href="">opcion 2</a></li>
+            <li id="option3"><a href="">opcion 3</a></li>
+        </ul>
+    </div>
+    <div id="menu_principal">
+        <ul>
+            <li id="archivo"><a href="">Archivo</a></li>
+            <li id="edicion"><a href="">Edicion</a></li>
+            <li id="herramienta"><a href="">Herramientas</a></li>
+        </ul>
+    </div>
+</body>
+</html>
