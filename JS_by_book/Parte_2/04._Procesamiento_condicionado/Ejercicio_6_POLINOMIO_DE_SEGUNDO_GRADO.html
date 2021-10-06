@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Ax2+Bx+C*/
+        var valor_a, valor_b, valor_c, resultado_polinomio, delta, valor_x1, valor_x2;
+        valor_a = parseInt(prompt("Introduzca A: "));
+        valor_b = parseInt(prompt("Introduzca B: "));
+        valor_c = parseInt(prompt("Introduzca C: "));
+
+        delta = (valor_b ** 2) - (4 * valor_a * valor_c);
+        document.write("a : " + valor_a + "<br />");
+        document.write("b : " + valor_b + "<br />");
+        document.write("c : " + valor_c + "<br />");
+        document.write("Discriminante delta : " + delta + "<br />");
+
+        if (delta < 0){
+            document.write("No hay soluciones reales");
+        }
+        else{
+            if (delta == 0){
+                resultado_polinomio = - valor_b / (2 * valor_a);
+                valor_x1 = (-valor_b + ((valor_b ** 2) - (4 * valor_a * valor_c))**(1/2))/(2 * valor_a);
+                valor_x2 = (-valor_b - ((valor_b ** 2) - (4 * valor_a * valor_c))**(1/2))/(2 * valor_a);
+                /*document.write("solucion única " + resultado_polinomio);*/
+                document.write("X1 = " + valor_x1 + "<br/>");
+                document.write("X2 = " + valor_x2 + "<br/>");
+            }
+            else{
+                valor_x1 = (-valor_b + ((valor_b ** 2) - (4 * valor_a * valor_c))**(1/2))/(2 * valor_a);
+                valor_x2 = (-valor_b - ((valor_b ** 2) - (4 * valor_a * valor_c))**(1/2))/(2 * valor_a);
+                document.write("X1 = " + valor_x1 + "<br/>");
+                document.write("X2 = " + valor_x2 + "<br/>");
+            }
+        }
+
+    </script>
+</body>
+</html>

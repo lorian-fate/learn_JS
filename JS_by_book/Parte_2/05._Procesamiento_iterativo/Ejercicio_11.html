@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cnt, suma, media, nblu;
+        cnt = 1;
+        suma = 0.0;
+
+        do{
+            nblu = parseFloat(prompt("Introduzca un número (El 0 es el último): "));
+            cnt = cnt + 1;
+            suma = suma + nblu;
+        }while(nblu != 0)
+
+        if(cnt == 2){
+            document.write("No se introdujo ningun número");
+        }
+        else{
+            media = suma / (cnt -1);
+            document.write("La media es: " + media);
+        }
+    </script>
+</body>
+</html>

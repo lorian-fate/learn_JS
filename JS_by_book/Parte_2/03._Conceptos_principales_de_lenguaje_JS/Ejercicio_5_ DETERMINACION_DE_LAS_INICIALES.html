@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var inicial_nombre, inicial_apellido, nombre, apellido;
+        nombre = prompt("Introduce tu nombre: ");
+        apellido = prompt("Introduce tu apellido: ");
+        inicial_nombre = nombre.charAt(0);
+        inicial_apellido = apellido.substring(0, 1);
+        
+        document.write("Estas son sus iniciales "+ inicial_nombre.toUpperCase() + 
+        ". " + inicial_apellido.toUpperCase() + ".");
+
+
+
+    </script>
+</body>
+</html>

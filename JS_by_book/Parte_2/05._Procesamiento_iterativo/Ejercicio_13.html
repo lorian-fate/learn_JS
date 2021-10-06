@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var palabra, n_volales, cnt;
+
+        palabra = prompt("Introduzca la palabra: ");
+        n_volales = 0;
+        for (cnt=1; cnt<=palabra.length; cnt ++){
+            switch (palabra.charAt(cnt).toUpperCase()) {
+                case "A":
+                    n_volales = n_volales + 1;
+                    break;
+                case "E":
+                    n_volales = n_volales + 1;
+                    break;
+                case "I":
+                    n_volales = n_volales + 1;
+                    break;
+                case "O":
+                    n_volales = n_volales + 1;
+                    break;
+                case "U":
+                    n_volales = n_volales + 1;
+                    break;
+            }
+        }
+        document.write("Hay " + n_volales + " vocales en total");
+
+    </script>
+</body>
+</html>

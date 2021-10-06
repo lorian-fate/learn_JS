@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nblu, cnt, suma, media;
+        cnt = 1;
+        suma = 0.0;
+
+        while (cnt <= 10){
+            nblu = parseFloat(prompt("Número nº " + cnt + ": "));
+            suma = suma + nblu;
+            cnt = cnt + 1;
+        }
+        media = suma / 10;
+        document.write("La media es: " + media);
+
+    </script>
+</body>
+</html>
