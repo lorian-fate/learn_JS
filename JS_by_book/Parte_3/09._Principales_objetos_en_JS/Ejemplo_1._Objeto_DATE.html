@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Metodo getDate, devuelve el n.º del dia del mes de la fecha del sistema */
+        var fechaDeHoy = new Date();
+        var diaMes = fechaDeHoy.getDate();
+        document.write("<br/>El dia es: " + diaMes);
+
+        /* Metodo getDay, devuelve el numero del dia de la semana */
+        var fechaDeHoy1 = new Date();
+        var diaSemana = fechaDeHoy1.getDay();
+        document.write("<br/>El numero del dia de la semana es: " + diaSemana);
+
+        /* Metodo getMonth, devuelve el numero del mes comprendido entre 0-11 */
+        var fechaDeHoy2 = new Date();
+        var mes = fechaDeHoy2.getMonth();
+        document.write("<br/>El numero del mes es: " + (mes + 1));
+
+        /* Metodo getFullYear, devuelve el numero del año */
+        var fechaDeHoy3 = new Date();
+        var anio = fechaDeHoy3.getFullYear();
+        document.write("<br/>El año es: " + anio);
+
+        /* Metodo getHours, devuelve 1 hora (0 23) */
+        var fechaDeHoy4 = new Date();
+        var hora = fechaDeHoy4.getHours();
+        document.write("<br/>la hora es: " + hora);
+
+        /* Metodo getMinutes, devuelve el numero de minutos (0 59) */
+        var fechaDeHoy5 = new Date();
+        var min = fechaDeHoy4.getMinutes();
+        document.write("<br/>los minutos son: " + min);
+        document.write("<br/>Son las: " + hora + ":" + min);
+
+        /* Metodo getSeconds, devuelve el numero de segundos (0 59*/
+        var fechaDeHoy6 = new Date();
+        var segund = fechaDeHoy5.getSeconds();
+        document.write("<br/>los segundos son: " + segund);
+        document.write("<br/>Son las" + hora + ":" + min + ":" + segund); 
+
+
+        /* Metodo setDate, define un numero de dia en el mes respecto a la fecha del sistema */
+        var fecha_de_hoy = new Date();
+        fecha_de_hoy.setDate(15);
+        document.write("<br/>hoy: " + fecha_de_hoy);
+
+        /* Metodo setMonth, define la fecha un mes atras respecto a la fecha del sistema */
+        var fecha_de_hoy1 = new Date();
+        fecha_de_hoy1.setMonth(fecha_de_hoy1.getMonth() - 1);
+        document.write("<br/>hoy hace un mes: " + fecha_de_hoy1);
+
+        /* Metodo setFullYear, define la fecha un año atras respecto a la fecha del sistema */
+        var fecha_de_hoy2 = new Date();
+        fecha_de_hoy2.setFullYear(fecha_de_hoy2.getFullYear() - 1);
+        document.write("<br/>hoy hace un año: " + fecha_de_hoy2);
+    </script>
+</body>
+</html>
