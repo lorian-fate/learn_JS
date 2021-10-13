@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre coche */
+        var Coche = function(){
+            /* atributo(s) del objeto */
+            this.tieneMotor = true;
+
+            /* metodo(S) del objeto */
+            this.avanzar = function(){
+                document.write("AVANZA");
+            }
+            this.retroceder = function(){
+                document.write("RETROCEDE");
+            }
+
+        }
+
+        /* Instanciacion de un objeto simca1000 a traves del constructor coche */
+        var simca1000 = new Coche();
+
+        /* Instanciacion de un objeto renault12 a traves del constructor coche */
+        var renault12 = new Coche();
+
+        /* Comprobacion del metodo avanzar de los objetos */
+        if (simca1000.avanzar == renault12.avanzar) {
+            document.write("Metodo avanzar compartido")
+        } else {
+            document.write("Metodo avanzar no compartido");
+        }
+    </script>
+</body>
+</html>

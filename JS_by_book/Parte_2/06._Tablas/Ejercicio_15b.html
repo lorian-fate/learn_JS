@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numLineas, numColumnas, valor;
+        var tb = new Array(5);
+
+        /*Añadimos 6 columnas en cada linea*/
+        for (numLineas = 1; numLineas < tb.length; numLineas ++){
+            tb[numLineas] = new Array(6);
+        }
+
+        /* Introducimos datos en las primeras 3 lineas y en las primeras 4 columnas */
+        for (numLineas = 1; numLineas <= 3; numLineas ++){
+            for (numColumnas = 1; numColumnas <= 4; numColumnas ++){
+                valor = parseInt(prompt("columna " + numColumnas + " de la fila " + numLineas));
+                tb[numLineas][numColumnas] = valor;
+            }
+        }
+
+        /* Puesta a cero de los totales en linea n.º 4 */
+        for(numColumna = 1; numColumna <= 5; numColumna++){
+            tb[4][numColumna] = 0;
+        }
+
+        /* Puesta a cero de los totales en columna n.º 5 */
+        for (numLinea = 1; numLinea <= 4; numLinea++){
+            tb[numLinea][5] = 0;
+        }
+
+        /* Calculamos totales de columnas y lineas */
+        for (numLineas = 1; numLineas <= 3; numLineas ++){
+            for (numColumnas = 1; numColumnas <= 4; numColumnas ++){
+                tb[numLineas][5] = tb[numLineas][5] + tb[numLineas][numColumnas]; 
+
+                tb[4][numColumnas] = tb[4][numColumnas] + tb[numLineas][numColumnas];
+
+                tb[4][5] = tb[4][5] + tb[numLineas][numColumnas];
+            }
+        }
+
+        /* Visualizacion por pantalla */
+        document.write(tb[1] + "<br/>");
+        document.write(tb[2] + "<br/>");
+        document.write(tb[3] + "<br/>");
+        document.write(tb[4] + "<br/>");
+    </script>
+</body>
+</html>

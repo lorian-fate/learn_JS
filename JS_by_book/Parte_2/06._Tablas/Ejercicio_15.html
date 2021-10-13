@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tb = new Array(5);
+        var numLinea, numColumna, valor;
+
+
+        for(numLinea = 1; numLinea<tb.length; numLinea++){
+            tb[numLinea] = new Array(6);
+        }
+
+        
+        for(numLinea = 1; numLinea <= 3; numLinea++){
+            for(numColumna = 1; numColumna <= 4; numColumna++){
+                valor = parseInt(prompt("tabla[" + numLinea + "][" + numColumna + "] = "));
+                tb[numLinea][numColumna] = valor;
+            }
+        }
+
+        /* Puesta a cero de los totales en linea n.º 4 */
+        for(numColumna = 1; numColumna <= 5; numColumna++){
+            tb[4][numColumna] = 0;
+        }
+
+        /* Puesta a cero de los totales en columna n.º 5 */
+        for (numLinea = 1; numLinea <= 4; numLinea++){
+            tb[numLinea][5] = 0;
+        }
+
+        /* Declaracion de los totales en linea n.º 4 y en columna n.º 5 */
+        for (numLinea = 1; numLinea <= 3; numLinea ++){
+            for (numColumna = 1; numColumna <= 4; numColumna ++){
+                /* Totales en linea n.º 4 */
+                tb[4][numColumna] = tb[4][numColumna] + tb[numLinea][numColumna];
+
+                /* totales en columna n.º 5 */
+                tb[numLinea][5] = tb[numLinea][5] + tb[numLinea][numColumna];
+
+                /* Totalizacion general en linea n.º4 columna n.º 5 */
+                tb[4][5] = tb[4][5] + tb[numLinea][numColumna];
+            }
+        }
+
+        /* Visualizacion del total general */
+        /* NB: total de 78 suponiendo que se mantiene la tecnica de llenada de la tabla tb */
+        document.write("total general en tb[4][5] = " + tb[4][5] + "<br/>");
+        document.write(tb[1] + "<br/>");
+        document.write(tb[2] + "<br/>");
+        document.write(tb[3] + "<br/>");
+        document.write(tb[4] + "<br/>");
+    </script>
+</body>
+</html>

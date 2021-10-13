@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre coche */
+        var Coche = function(){
+            /* Atributos del objeto */
+            this.tieneMotor = true;
+
+            /* Metodos del objeto */
+            this.avanzar = function(){
+                document.write("Avanza");
+            }
+        }
+
+        /* Instanciacion de un objeto simca1000 a traves del constructor coche */
+        var simca1000 = new Coche();
+
+        /* Visualizacion del atributo tieneMotor del objeto simca1000 */
+        if (simca1000.tieneMotor) {
+            document.write("El coche simca1000 tiene un motor <br/>");
+        } else {
+            document.write("El coche simca1000 no tiene un motor");
+        }
+
+        document.write("El coche simca1000 ");
+        simca1000.avanzar();
+    </script>
+</body>
+</html>

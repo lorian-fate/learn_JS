@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre coche */
+        var Coche = function (){}
+
+        /* Comprobacion de la existencia de un prototipo para cualquier constructor */
+        document.write("prototipo del constructor " + Coche.prototype);
+
+        /* Añadir un metodo zigzaguear al prototipo del constructor coche */
+        Coche.prototype.zigzaguear = function () {
+            document.write("zigzaguear peligrosamente <br/>");
+        }
+
+        /* Instanciacion de un objeto simca1000 a traves del constructor coche */
+        var simca1000 = new Coche();
+        
+        /* llamada al metodo zigzaguear del objeto simca1000 */
+        document.write("<br/> ¿Qué hace el coche? ");
+        simca1000.zigzaguear();
+
+        /* Instanciacion de un objeto renault12 a traves del constructor coche */
+        var renault12 = new Coche();
+
+        /* Comprobacion del metodo zigzaguear compartido o no */
+        if (simca1000.zigzaguear == renault12.zigzaguear) {
+            document.write("Metodo zugzaguear compartido por ambos coches");
+        } else {
+            document.write("Metodo zigzaguear no compartido por ambos coches")
+        }
+
+    </script>
+</body>
+</html>

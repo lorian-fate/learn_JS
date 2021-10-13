@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre Vehiculo */
+        var Vehiculo = function() {};
+
+        /* Añadir un metodo acelerar al prototipo del construtor vehiculo */
+        Vehiculo.prototype.acelerar = function(){
+            document.write("acelera<br/>");
+        }
+
+        /* Definicion de una funcion constructor de nombre Coche */
+        var Coche = function(){};
+
+        /* Copia de todos los elementos del prototipo del constructor
+         Vehiculo al prototipo del constructor coche */
+        for (clave in Vehiculo.prototype){
+            Coche.prototype[clave] = Vehiculo.prototype[clave];
+        }
+
+        /* Añadir el metodo frenar al prototipo del constructor Vehiculo */
+        Vehiculo.prototype.frenar = function(){
+            document.write("frena<br/>");
+        }
+
+        /* Instanciacion de un objeto barco a traves del constructor vehiculo */
+        var barco = new Vehiculo();
+
+        /* llamada del metodo frenar para el objeto barco */
+        document.write("El barco ");
+        barco.frenar();
+
+        /* Instanciacion de un objeto simca1000 a traves del constructro Coche */
+        var simca1000 = new Coche();
+
+        /* Llamada del metodo frenar del objeto simca1000 */
+        document.write("El simca1000 ");
+        simca1000.frenar();
+    </script>
+</body>
+</html>

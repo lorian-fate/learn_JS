@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre vehiculo */
+        var Vehiculo = function(){};
+
+        /* Añadir un metodo acelerar al prototipo del constructor vehiculo */
+        Vehiculo.prototype.acelerar = function(){
+            document.write("acelera <br/>");
+        }
+
+        /* Definicion de una funcion constructro de nombre conche */
+        var Coche = function() {};
+
+        /* Copia de todos los elementos del prototipo del constructor Vehiculo al constructor Coche */
+        for (clave in Vehiculo.prototype){
+            Coche.prototype[clave] = Vehiculo.prototype[clave];
+        }
+
+        /* Instanciacion de un objeto simca1000 a traves del constructor Coche */
+        var simca1000 = new Coche();
+
+        /* Constructor utilizado en la creacion del objeto simca1000 es coche? */
+        document.write("Simca1000 tiene un constructor conche: ");
+        document.write(simca1000 instanceof Coche);
+
+        /* Constructor utilizado en la creacion del objeto simca1000 es vehiculo? */
+        document.write("<br/>Simca1000 tiene un constructor conche: ");
+        document.write(simca1000 instanceof Vehiculo);
+    </script>
+</body>
+</html>

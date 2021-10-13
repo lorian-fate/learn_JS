@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre coche */
+        var Coche = function (){};
+
+        /* Añadir un metodo cargar al prototipo del coche */
+        Coche.prototype.cargar = function(){
+            document.write("Carga <br/>");
+        }
+
+        /* Instanciacion de un objeto simca1000 a traves del constructor coche */
+        var simca1000 = new Coche();
+        var renault12 = new Coche();
+
+        /* Llamada del metodo cargar del objeto simca1000 */
+        document.write("El simca1000 ");
+        simca1000.cargar();
+
+        /* Modificacion del metodo cargar para el objeto simca1000 */
+        simca1000.cargar = function (){
+            document.write("Carga rapidamente <br/>");
+        }
+
+        /* Llamada del metodo cargar (sobrecargado) del objeto simca1000 */
+        document.write("El simca1000 ");
+        simca1000.cargar();
+
+        /* Llamada del metodo cargar (no sobrecargado) del objeto renault12 */
+        document.write("El renault ");
+        renault12.cargar();
+    </script>
+</body>
+</html>

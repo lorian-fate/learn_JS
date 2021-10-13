@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre coche */
+        var Coche = function(){
+            /* Variable local no accesible desde el exterior */
+            var numeroRuedas = 4;
+
+            /* metodo(S) del objeto */
+            this.avanzar = function(){
+                document.write("avanza"); 
+            }
+        }
+
+        /* instanciacion de un objeto simca1000 a traves del constructor coche */
+        var simca1000 = new Coche();
+
+        /* llamada al metodo avanzar del objeto simca1000 */
+        document.write("El coche simca1000 ");
+        simca1000.avanzar();
+
+        /* Intento de visualizacion de la variable local del constructor coche */
+        document.write("<br/>");
+        document.write("El coche simca100 tiene " + simca1000.numeroRuedas + " Ruedas");
+    </script>
+</body>
+</html>

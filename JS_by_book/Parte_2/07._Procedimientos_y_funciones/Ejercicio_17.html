@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maxi(x, y){
+            if (x > y) {
+                return (x + " Es mayor que " + y);
+            }
+            if (y > x){
+                return (y + " Es mayor que " + x);
+            }
+        }
+
+        /* Introduccion por teclado de los valores */
+        var a, b;
+        var myARG = Array(4);
+        for (a = 0; a < myARG.length; a ++){
+            b = parseInt(prompt("Introduzca el valor " + a));
+            myARG[a] = b;
+        }
+        document.write(maxi(myARG[0], myARG[1]) + "<br/>");
+        document.write(maxi(myARG[2], myARG[3]));
+    </script>
+</body>
+</html>

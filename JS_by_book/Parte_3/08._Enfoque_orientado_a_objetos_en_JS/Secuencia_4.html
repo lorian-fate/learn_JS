@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Definicion de una funcion constructor de nombre coche */
+        var Coche = function(modelo){
+            /* Atributo(s) del objeto informado durante la instanciacion */
+            this.modelo = modelo;
+        }
+
+        /* Instanciacion de un objeto simca1000 a traves del constructor coche con paso de arg*/
+        var carname = prompt("type your car name: ");
+        var simca1000 = new Coche(carname);
+
+        /* Visualicacion del atributo modelo del objeto simca1000 */
+        document.write("tengo un " + simca1000.modelo);
+    </script>
+</body>
+</html>
