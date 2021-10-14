@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Ejemplo_3.css">
+    <script>
+        /* Funcion iniciar timer */
+        function iniciarTimer(){
+
+            /* Valor de inicio del timer */
+            var valorTimer = "";
+            valorTimer = document.getElementById("quantity").value;
+            /*valorTimer = parseInt(valorTimer);*/
+
+            /* Llamada de la funcion de actualizacion del timer */
+            actualizarTimer();
+            
+        }
+
+        /* Funcion actualizar timer */
+        function actualizarTimer(){
+            if (valorTimer > 0){
+                /* Decrementar una unidad (segundo) */
+                valorTimer = valorTimer - 1;
+
+                /* Visualizacion del valor actualizado del timer */
+                document.getElementById("visualizacionTimer").
+                innerHTML = valorTimer;
+
+                /* Actualizacion llamando a la funcion actualizar */
+                if (valorTimer > 0){
+                    /* Actualizacion cada segundo (1000 milisegundos) */
+                    miTimer = setTimeout("actualizarTimer()", 1000);
+                }
+            }
+        }
+
+        /* Visualizacion del valor actualizado del timer */
+        document.getElementById("visualizacionTimer").innerHTML = valorTimer;
+
+        /* Funcion pararTimer */
+        function pararTimer(){
+            clearTimeout(miTimer);
+        }
+    </script>
+
+</head>
+<body>
+    <div id="maindiv">
+        <div id="amounth">
+            <input type="text" name="" id="quantity">
+        </div>
+        <div id="buttondiv">
+            <input type="button" value="Iniciar timer" onclick="iniciarTimer()">
+            <input type="button" value="Parar timer" onclick="pararTimer()">
+        </div>
+        <br/><br/>
+        <div id="visualizacionTimer">Timer</div>
+    </div>
+</body>
+</html>

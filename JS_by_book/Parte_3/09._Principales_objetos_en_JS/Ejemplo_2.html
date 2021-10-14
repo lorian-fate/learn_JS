@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Funcion mostrarHoraActual */
+        function mostrarHoraActual(){
+            /* Recuperar la hora del sistema */
+            var miHoraReferencia = new Date();
+
+            /* Conversion de la hora del sistema en formato local (hh:mm:ss) */
+            var hhmmss = miHoraReferencia.toLocaleTimeString();
+
+            /* Visualizacion en el span hora actual */
+            document.getElementById("horaActual").innerHTML = hhmmss;
+        }
+        /* Llamada de la funcion mostrarHoraActual */
+        var miHora = setInterval(
+            function(){
+                mostrarHoraActual()
+            }, 1000
+        );
+    </script>
+    Hora Actual: <span id="horaActual"></span>
+</body>
+</html>

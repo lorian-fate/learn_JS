@@ -1,0 +1,38 @@
+
+
+
+#maindiv{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 400px;
+    margin: auto;
+    padding: 20px 0 20px 0;
+}
+
+#buttondiv{
+    margin: auto;
+
+}
+
+#visualizacionTimer{
+    margin: auto;
+    background-color: rgb(30, 0, 202);
+    width: 170px;
+    color: white;
+    text-align: center;
+    padding: 4px 0 4px 0;
+    border-radius: 10px;
+}
+
+#amounth{
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: brown;
+    margin-bottom: 10px;
+}
+#quantity{
+    border-radius: 5px;
+    text-align: center;
+}

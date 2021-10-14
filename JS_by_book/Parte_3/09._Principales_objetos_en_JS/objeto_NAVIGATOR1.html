@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* Funcion comprobarNavegador */
+        function comprobarNavegador(){
+            var caracteristicasNavegador = "";
+            caracteristicasNavegador = "Código del navegador: " + navigator.appCodeName + "<br>";
+            caracteristicasNavegador += "Nombre del navegador " + navigator.appName + "<br>";
+            caracteristicasNavegador += "Version " + navigator.appVersion + "<br>";
+            caracteristicasNavegador += "Soporte a las cookies " + navigator.cookieEnabled + "<br>";
+            caracteristicasNavegador += "Sistema operativo " + navigator.platform + "<br>";
+            caracteristicasNavegador += "User-agent header " + navigator.userAgent + "<br>";
+            caracteristicasNavegador += "User-agent language " + navigator.languages +"<br>";
+            
+            /* mostrar las caracteristicas del navegador */
+            document.getElementById("mostrarInfosNavegador").innerHTML = caracteristicasNavegador;
+
+        }
+    </script>
+</head>
+<body>
+    <!-- Llamada a la funcion de visualizacion de las caracteristicas del navegador -->
+    <div>
+        <input 
+            type="button" 
+            value="caracteristicas del navegador"
+            onclick="comprobarNavegador()"
+        >
+    </div>
+    <br><br>
+    <div id="mostrarInfosNavegador"></div>
+</body>
+</html>

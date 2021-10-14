@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Funcion abrirVentana */
+        function abrirVentana(URL){
+            miVentana = window.open(
+                URL,
+                "VENTANA_03",
+                "width=800,\
+                height=400,\
+                location=1,\
+                titlebar=yes,\
+                resizable=yes"
+            );
+            /* Visualizacion de la ventana durante 10 segundos */
+            timeout = setTimeout("cerrarVentana()", 10000);
+        }
+        
+        /* Funcion cerrarVentana */
+        function cerrarVentana(){
+            miVentana.close();
+        }
+    </script>
+    <form action="">
+        Apertura de una ventana pasando la url<br/>
+        <input 
+            type="button" 
+            value="Apertura de una ventana yahoo.es por 10 segundos"
+            onclick="abrirVentana('http://yahoo.es')"
+        >
+    </form>
+</body>
+</html>

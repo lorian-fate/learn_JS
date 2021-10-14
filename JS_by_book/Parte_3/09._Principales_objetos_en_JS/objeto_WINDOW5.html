@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* funcion acceder_objetoWINDOW6 */
+        function acceder_objetoWINDOW6(){
+            /* Acceso a la página objeto_WINDOW6.html */
+            miVentana = window.open("objeto_WINDOW6.html", "_self");
+        }
+    </script>
+</head>
+<body>
+    <!-- Acceso a la página objeto_WINDOW5.html -->
+    <form post="objeto_WINDOW6.html">
+        <input 
+            type="button" 
+            value="Acceso a la página objeto_WINDOW6.html"
+            onclick="acceder_objetoWINDOW6()"
+        >
+    </form>
+</body>
+</html>

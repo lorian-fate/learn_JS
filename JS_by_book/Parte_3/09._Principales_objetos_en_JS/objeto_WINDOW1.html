@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Apertura de la ventana */
+        /* Argumentos en (orden de aparicion)
+            - URL (opcional): Indica la dirección URL de la página a abrir. 
+              Si no se especifica ninguna URL, una nueva ventana con about: blank se abre
+			- Nombre de la ventana (Opcional) : Especifica el atributo destino o 
+              el nombre de la ventana
+			  Los valores siguientes se soportan :
+			  _blank : URL se carga en una nuevo ventana (valor por defecto)
+			  _padre : URL se carga en el contenedor del padre
+			  _self : URL sustituye la página actual
+			  _top : URL sustituye los juegos de marcos que puedan estar cargados
+			  Nombre : El nombre de la ventana
+			- Especificaciones detalladas de la ventana :
+			 * height=pixeles : Altura de la ventana (100 pixeles minimo)
+			 * left=pixeles : Posicion de la ventana respecto a la izquierda de la pantalla
+			 * location=yes|no|1|0 : Presencia o no de una barra de direccion
+			 * menubar=yes|no|1|0 : Presencia o no de una barra de menús
+			 * resizable=yes|no|1|0 : Posibilidad o no de redimensionar la ventana
+			 * scrollbars=yes|no|1|0 : Presencia o no de barras de desplazamiento
+			 * status=yes|no|1|0 : Presencia o no de una barra de estado
+			 * titlebar=yes|no|1|0 : Presencia o no de una barra de título
+			 * toolbar=yes|no|1|0 : Presencia o no de una barra de herramientas
+			 * width=píxeles : Longitud de la ventana en píxeles
+        */
+        var miVentana = window.open("", "VENTANA_01", "width=200, height=100, location=yes, titlebar=yes");
+        
+        /* Escribir un mensaje en la ventana */
+        miVentana.document.write("Ventana creada en <b>JS</b>");
+
+        /* focus en la ventana */
+        miVentana.focus();
+        
+    </script>
+</body>
+</html>

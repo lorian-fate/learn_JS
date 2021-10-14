@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* definicion de variables de tipo string */
+        var apellido = new String("Angelus");
+        var nombre = "Darkness";
+        document.write("Apellido: " + apellido + "<br>" + "Nombre: " + nombre);
+
+        /* Inicial del apellido */
+        document.write("<br>la inicial de " + apellido + " es: " + apellido.charAt(0));
+
+        /* posicion en la tabla ASCII de la inicial */
+        document.write("<br>Valor unicode de la inicial del nombre: " + nombre.charCodeAt(0));
+
+        /* Concatenacion del nombre y el apellido */
+        var identidad = apellido.concat(" ");
+        identidad = identidad.concat(nombre);
+        document.write("<br>Apellido & Nombre: " + identidad);
+
+        /* posicion de la primera letra s en el nombre */
+        var posicion_s = nombre.indexOf("s") + 1;
+        document.write("<br>La primera letra s del nombre está en la posicion: " + posicion_s);
+
+        /* posiciond de la ultima letra s en el nombre */
+        var pos_s = nombre.lastIndexOf("s") + 1;
+        document.write("<br>La ultima letra s del nombre está en la posicion: " + pos_s);
+
+        /* sustitucion de una cadena de caracteres */
+        var originName = nombre.replace("ness", "er");
+        document.write("<br>Origen del nombre: " + originName);
+
+        /* Extraccion de una subcadena con el metodo slice(pos_init, pos_end -1) */
+        var apodo = nombre.slice(1, 5);
+        document.write("<br>Apodo (metodo slice()): " + apodo);
+
+        /* Extraccion de una subcadena con el metodo substr(pos_init, lenght) */
+        apodo = nombre.substr(2, 4);
+        document.write("<br>Apodo (metodo substr()): " + apodo);
+
+        /* Extraccion de una subcadena con el metodo substring(pos_init, pos_end -1) */
+        apodo = nombre.substring(1, 5);
+        document.write("<br>Apodo (metodo substring()): " + apodo);
+
+        /* Separacion de una frase */
+        var autor = "The world I close my eyes to see";
+        var tablaAutor = autor.split(" ");
+        document.write("<br>That I see with my eyes closed: " + tablaAutor[1]);
+
+        /* Conversion en mayusculas */
+        document.write("<br>El apellido en mayusculas: " + apellido.toUpperCase());
+
+        /* Conversion en minusculas */
+        document.write("<br>El apellido en minusculas: " + apellido.toLowerCase());
+
+        /* Eliminacion de los espacios no significativos */
+        var identidad = "       Bullard the Ralentless ";
+        document.write("<br>Identidad con espacios no significativos: " + "[" + identidad + "]");
+        document.write("</br>Identidad sin espacios no significativos: " + identidad.trim());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

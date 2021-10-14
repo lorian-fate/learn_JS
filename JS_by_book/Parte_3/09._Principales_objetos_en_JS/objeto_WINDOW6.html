@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* funcion volverPaginaAnterior */
+        function volverPaginaAnterior(){
+            /* Volver a la página anterior */
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <script>
+        /* Informacion de la url de la página actual */
+
+        /* propiedad host */
+        document.write("<br/>Propiedad location.host: " + window.location.host);
+
+        /* propiedad hostname */
+        document.write("<br/>Propiedad location.hostname: " + window.location.hostname);
+
+        /* propiedad href */
+        document.write("<br/>Propiedad location.href: " + window.location.href);
+
+        /* propiedad pathname*/
+        document.write("<br/>Propiedad location.pathname: " + window.location.pathname);
+
+        /* propiedad port */
+        document.write("<br/>Propiedad location.port: " + window.location.port);
+
+        
+    </script>
+    <div>
+        <input 
+            type="button" 
+            value="Volver a la página anterior"
+            onclick="volverPaginaAnterior()"
+        >
+    </div>
+</body>
+</html>

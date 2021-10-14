@@ -60,6 +60,16 @@
         var fecha_de_hoy2 = new Date();
         fecha_de_hoy2.setFullYear(fecha_de_hoy2.getFullYear() - 1);
         document.write("<br/>hoy hace un año: " + fecha_de_hoy2);
+
+        /* Metodo toLocaleDateString, convierte la fecha del sistema en una cadena de fecha */
+        var fecha_de_hoy3 = new Date();
+        var dateLocale = fecha_de_hoy3.toLocaleDateString();
+        document.write("<br/> Fecha del sistema (version locale=ES): " + dateLocale);
+
+        /* Metodo toLocaleTimeString, convierte la fecha del sistema en una cadena de h/m/s */
+        var fecha_de_hoy4 = new Date();
+        var timeLocal = fecha_de_hoy4.toLocaleTimeString();
+        document.write("<br/>Horas/Minutos/Segundos (version locale=ES): " + timeLocal);
     </script>
 </body>
 </html>
