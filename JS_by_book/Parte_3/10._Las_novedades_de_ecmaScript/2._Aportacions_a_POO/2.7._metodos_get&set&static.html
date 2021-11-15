@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaSript 6: POO (getter, setter y metodos estaticos) - Script poo_07.html</h3>
+
+        <script>
+            //Definicion de una clase coche
+            class Coche{
+                //Metodo constructor
+                constructor(marca, modelo, pais){
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.pais = pais;
+                }
+
+                //Metodo del tipo getter(acceso al valor de los atributos)
+                get getMarca(){
+                    return this.marca;
+                };
+                get getModelo(){
+                    return this.modelo;
+                };
+                get getPais(){
+                    return this.pais;
+                };
+
+                //Metodos del tipo setter(modificacion de los atributos)
+                set setModelo(value){
+                    this.modelo = value;
+                };
+
+                //Metodo estatico que cuenta la cantidad de objetos creados a traves de esta clase
+                static getNumeroCoches(){
+                    if (!this.contadorCoches && this.contadorCoches !== 0){
+                        //Inicializacion del contador de objetos instanciados si no existe
+                        this.contadorCoches = 0; 
+                    }
+                    else{
+                        //Se incrementa en numero de objetos instanciados
+                        this.contadorCoches ++;
+                    }
+                    //valor devuelto
+                    return this.contadorCoches + 1;
+                };
+
+            }
+
+            //Instanciacion de un objeto porche de la clase coche y visualizacion 
+            //del numero de coches instanciados
+            let porche12 = new Coche("Porche", "12", "Alemania");
+            document.write("Marca: " + porche12.getMarca + "<br/>");
+            document.write("Modelo: " + porche12.getModelo + "<br/>");
+            document.write("Pais: " + porche12.getPais + "<br/>");
+            document.write("Numero de coches instanciados: " + Coche.getNumeroCoches() + "<br/><br/>");
+
+            //Modificacion del objeto porche
+            porche12.setModelo = "911 Turbo";
+            document.write("Modelo (Tras la modificacion): " + porche12.getModelo + "<br/><br/>");
+
+            //Instanciacion de un objeto testarosa de la clase coche y visualizacion de 
+            //numero de coches instanciados
+            let testarosa = new Coche("Ferrari", "testarosa", "Italia");
+            document.write("Marca: " + testarosa.getMarca + "<br/>");
+            document.write("Modelo: " + testarosa.getModelo + "<br/>");
+            document.write("Pais: " + testarosa.getPais + "<br/>");
+            document.write("Numero de coches instanciados: " + Coche.getNumeroCoches() + "<br/>");
+        </script>
+
+    </font>
+</body>
+</html>

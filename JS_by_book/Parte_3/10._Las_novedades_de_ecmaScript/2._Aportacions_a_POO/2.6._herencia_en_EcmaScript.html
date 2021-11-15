@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 5 Herencia en EcmaScript - Script poo_06.html</h3>
+
+        <script>
+            //Definicion de una clase coche
+            class Coche{
+                constructor(marca, modelo, pais){
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.pais = pais;
+                };
+
+                mostrarCoche(){
+                    return "Marca: " + this.marca
+                    + "<br/>Modelo: " + this.modelo
+                    + "<br/>Pais: " + this.pais;
+                };
+            };
+
+            //Definicion de la clase cocheDeportivo extension de la clase coche
+            class CocheDeportivo extends Coche{
+                //Metodo constructor
+                constructor(marca, modelo, pais, velocidadMax){
+                    //Herencia de los atributos de la clase madre Coche
+                    super(marca, modelo, pais);
+
+                    //Atributo especifico de la clase cochedeportivo
+                    this.velocidadMax = velocidadMax;
+                };
+
+                //Metodo mostrar CocheDeportivo
+                mostrarCocheDeportivo(){
+                    return super.mostrarCoche()
+                    + "<br/>Velocidad Máxima: " + this.velocidadMax;
+                };
+            };
+
+            //Instanciacion de un objeto simca de la clase coche
+            let simca100 = new Coche("simca", "100", "Francia");
+
+            //LLamada al metodo mostrarcoche de la clase coche
+            document.write(simca100.mostrarCoche());
+
+            //Instanciacion de un objeto porche de la clase CocheDeportivo
+            let porche100 = new CocheDeportivo("Porche", "100", "Francia", 290);
+
+            //Llamada al metodo mostrarcocheDeportivo de la clase cocheDeportivo
+            document.write("<br/><br/>" + porche100.mostrarCocheDeportivo());
+        </script>
+    </font>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 6: Uso de la sintaxis arrow (=>)</h3>
+
+        <script>
+            //Definicion de una tabla JS Coche Deportivo (Marca unicamente)
+            let tablaCocheDeportivo = ["Porche", "Ferrari", "BMW"];
+
+            //Bucle de visualizacion de tres marcas preferidas
+            document.write("<br/>Bucle de visualizacion de tres marcas preferidas");
+            document.write("(Uso de Foreach sin notacion =>): <br/>");
+            tablaCocheDeportivo.forEach(function(marca){
+                document.write("Marca: " + marca + "<br/>");
+            })
+
+            //Bucle de visualizacion de tres marcas preferidas
+            document.write("<br/>Bucle de visualizacion de tres marcas preferidas");
+            document.write("(Uso de Foreach con notacion =>): <br/>");
+            tablaCocheDeportivo.forEach(marca =>{
+                document.write("Marca: " + marca + "<br/>");
+            })
+
+            //Definicion de un objeto JS de coche deportivos sin arrow function
+            var objetoCocheDeportivos1 = {
+                marcas : ["Porche", "Ferrari", "BMW"],
+                genero: "coche deportivo",
+                mostrarCoche: function(){
+                    //Self sirve para recuperar el contexto padre (util para mostrar la propiedad genero)
+                    //pues function(marca) crea un scope diferente de su padre
+                    var self = this;
+                    this.marcas.forEach(function(marca){
+                        document.write("Marca: " + marca + "-");
+                        document.write("Genero: " + self.genero + "<br/>");
+                    })
+                }
+            }
+
+            //Visualizacion de las marcas mediante el metodo mostrarCoches
+            document.write("<br/>Bucle de visualizacion de las 3 marcas preferidas");
+            document.write("Con su genero (ForEach sin notacion =>):<br/>");
+            objetoCocheDeportivos1.mostrarCoche();
+
+            //Definicion de un objeto JS de coche deportivo con arrow function
+            var objCocheDeportivo2 = {
+                marcas : ["Porche", "Ferrari", "BMW"],
+                genero: "coche deportivo",
+                mostrarCoche: function(){
+                    //Self no es necesario
+                    //pues la arrow function no crea su propio scope
+                    //this.genero hace referencia al this del padre
+                    this.marcas.forEach((marca) =>{
+                        document.write("Marca: " + marca + "-");
+                        document.write("Genero: " + self.genero + "<br/>");
+                    })
+                }
+
+            }
+
+            //Visualizacion de las marcas mediante el metodo mostrar coche
+            document.write("<br/>Bucle de visualizacion de 3 marcas preferidas");
+            document.write("Con su genero (ForEach con notacion =>): <br/>");
+            objCocheDeportivo2.mostrarCoche();
+
+        </script>
+
+    </font>
+</body>
+</html>

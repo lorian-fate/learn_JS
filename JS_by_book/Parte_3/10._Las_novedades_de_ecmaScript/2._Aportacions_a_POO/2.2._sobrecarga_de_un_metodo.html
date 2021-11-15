@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 5 & 6 Sobrecarga de un metodo --Script poo_2.html</h3>
+        <script>
+            /*Definicion de una funcion constructor*/
+            var Coche = function(){};
+
+            /*Agregar el metodo frenar en seco al prototipo del construtor coche */
+            Coche.prototype.frenarenseco = function(){
+                document.write("Frena en seco<br/>")
+            };
+
+            /*Instanciacion de un objeto simca100 mediante el constructor coche*/
+            var simca100 = new Coche();
+
+            /*Llamada del metodo frenar en seco del objeto simca100 accesible medionte el constructor coche*/
+            document.write("El simca ");
+            simca100.frenarenseco();
+
+            /*Instanciacion de un objeto renaul12 mediante el constructor coche*/
+            var renaul12 = new Coche();
+
+            /*Modificacion (sobrecarga) del metodo frenar en seco para el objeto simca1000*/
+            simca100.frenarenseco = function(){
+                document.write("Frenar en seco bruscamente<br/>")
+            };
+
+            /*Llamada al metodo (sobrecargado) del objeto simca100*/
+            document.write("El simca ");
+            simca100.frenarenseco();
+
+            /*Llamada del metodo frenar en seco (no sobrecargado) del objeto renaul12*/
+            document.write("El renaul ");
+            renaul12.frenarenseco();
+
+        </script>
+    </font>
+</body>
+</html>

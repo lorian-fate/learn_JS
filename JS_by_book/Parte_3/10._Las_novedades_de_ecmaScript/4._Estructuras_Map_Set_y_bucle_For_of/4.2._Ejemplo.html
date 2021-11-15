@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 6: Map, Set y bucle for...of</h3>
+        <script>
+            //Definicion de una tabla JS y visualizacion de su contenido
+            document.write("<h4>Tabla JS<h4/>");
+            
+                //Definicion de una Tabla JS de coches (marca unicamente)
+            let tabCoches = new Array("Porche", "Ferrari", "BMW");
+            
+            //Se agrega un cuarto coche
+            tabCoches.push("Jaguar");
+            
+            //Visualizacion de las marcas de la tabla tabCoches (mediante un for)
+            document.write("Marcas de la tabla tabCoches (mediante un for):<br/>");
+            for(i = 0; i < tabCoches.length; i++){
+                document.write(tabCoches[i] + "<br/>");
+            };
+
+            //Visualizacion de las marcas de la tabla tabCoches (mediante un for of)
+            document.write("<br/>Marcas de la tabla tabCoches (mediante un for of):<br/>");
+            for (let marcas of tabCoches){
+                document.write(marcas + "<br/>");
+            };
+
+            //Visualizacion del numero de coches presentados en la tabCoches
+            document.write("<br/>Número de coches de la tabla tabCoche: " + tabCoches.length);
+
+            /*var nuevoCoche = prompt("quieres añadir un coche? (y/n)");
+            if (nuevoCoche == "y"){
+                var coche = prompt("introduce la marca");
+                tabCoches.push(coche);
+                document.write("<br/>todas las marcas disponibles<br/>");
+                for (let marca of tabCoches){
+                    document.write(marca + "<br/>");
+                }
+            }*/
+
+            //Definicion de un Map JS y visualizacion de su contenido
+            document.write("<h4>Map JS<h4/>");
+            
+            
+        </script>
+
+    </font>
+</body>
+</html>

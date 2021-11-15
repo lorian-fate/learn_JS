@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 5 & 6 Extension de Prototipo - Script poo_03.html</h3>
+        <script>
+            /*Definicion de una funcion constructor llamada conche*/
+            var Coche = function() {};
+
+            /*Agregar un metodo acelerar al prototipo del constructor coche*/
+            Coche.prototype.acelerar = function(){
+                document.write("acelera <br/>")
+            };
+
+            /*Instanciacion de un objeto simca100 mediante el constructor coche */
+            var simca100 = new Coche();
+
+            /*Llamada del metodo zigzaguear del objeto simca100 accecible mediante el constructo coche*/
+            document.write("<br/> ¿Qué hace el simca? El coche ");
+            simca100.acelerar();
+
+            /*Agregar un metodo decelerar al prototipo del constructor coche*/
+            Coche.prototype.decelerar = function(){
+                document.write("decelera");
+            };
+
+            /*Llamada del metodo zigzaguear del objeto simca100 accecible mediante el constructo coche*/
+            document.write("<br/> ¿Qué hace el simca? El coche ");
+            simca100.decelerar();
+        </script>
+    </font>
+</body>
+</html>

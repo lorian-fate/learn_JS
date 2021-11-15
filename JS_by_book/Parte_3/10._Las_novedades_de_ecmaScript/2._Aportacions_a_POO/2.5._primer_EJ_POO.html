@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 5 Primer ejemplo de POO - Script poo_05.html</h3>
+
+        <script>
+            //Definicion de una clase coche
+            class Coche{
+                //Metodo constructor
+                constructor(marca, modelo, pais){
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.pais = pais;
+                };
+
+                //Metodo mostrar coche
+                mostrarcoche(){
+                    return "marca: " + this.marca 
+                    + "<br/>modelo: " + this.modelo 
+                    + "<br/>pais: " + this.pais; 
+                };
+            };
+            
+            //Instanciacion de un objeto simca100 de la clase coche
+            let simca100 = new Coche("Simca", "100", "Francia");
+
+            //Llamada al metodo mostrarcoche de la clase coche
+            document.write(simca100.mostrarcoche())
+            
+        </script>
+    </font>
+</body>
+</html>
