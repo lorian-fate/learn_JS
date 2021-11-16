@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 6: Declaracion de las variables var y let</h3>
+
+        <script>
+            //Definicion de una variable porche911 mediante un var (ambito en el conjunto del script)
+            var porche911 = "Porche 911";
+
+            //Bucle de visualizacion de 3 marcas preferidas
+            document.write("<br/>Bucle de visualizacion de tres marcas");
+            document.write("Uso de var<br/>");
+            for (var varMarca of ["Porche", "Ferrari", "BMW"]){
+                document.write("Marca: " + varMarca + "<br/>");
+            };
+
+            //Visualizacion de la variable porche911
+            document.write("<br/>Variable marca: " + porche911 + "<br/>");
+
+            //Visualizacion de la variable varMarca
+            document.write("<br/> Marca: " + varMarca);
+
+            //Bucle de visualizacion de tres marcas preferidas
+            document.write("<br/>Bucle de visualizacion de tres marcas preferidas<br/>Uso de let<br/>");
+            for (let letMarca of ["Porche", "Ferrari", "BMW"]){
+                document.write("Marca: " + letMarca + "<br/>");
+            };
+            
+
+        </script>
+
+    </font>
+</body>
+</html>

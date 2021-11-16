@@ -12,6 +12,7 @@
         <script>
             //Definicion de una tabla JS y visualizacion de su contenido
             document.write("<h4>Tabla JS<h4/>");
+            document.write("===========================================================")
             
                 //Definicion de una Tabla JS de coches (marca unicamente)
             let tabCoches = new Array("Porche", "Ferrari", "BMW");
@@ -20,7 +21,7 @@
             tabCoches.push("Jaguar");
             
             //Visualizacion de las marcas de la tabla tabCoches (mediante un for)
-            document.write("Marcas de la tabla tabCoches (mediante un for):<br/>");
+            document.write("<br/>Marcas de la tabla tabCoches (mediante un for):<br/>");
             for(i = 0; i < tabCoches.length; i++){
                 document.write(tabCoches[i] + "<br/>");
             };
@@ -46,8 +47,59 @@
 
             //Definicion de un Map JS y visualizacion de su contenido
             document.write("<h4>Map JS<h4/>");
+            document.write("===========================================================")
+            //Definicion de un Map JS de coches (codigo como clave, etiqueta como valor)
+            let mapCoche = new Map([["Porche911", "Porche 911"],
+                                    ["Testarosa", "Ferrari Testarosa"],
+                                    ["BMWM5", "BMW M5"]]);
+            //Se agrega un cuarto coche
+            mapCoche.set("JaguarXJ", "Jaguar XJ");
             
-            
+            //Visualizacion de los coches (codigo unicamente) del map mapCocche
+            document.write("<br/>Claves del mapa mapCoche <br/>");
+            for (let coche of mapCoche.keys()){
+                document.write("Codigo de coche: " + coche + "<br/>");
+            };
+
+            //Visualizacion de los coches (etiqueta unicamente) del mapa mapCoche
+            document.write("<br/>Valores etiquetas del mapa mapCoche<br/>");
+            for (let coche of mapCoche.values()){
+                document.write("valor de coche: " + coche + "<br/>");
+            };
+
+            //Visualizacion de los coches (codigo, etiqueta) del mapa mapCoche mediante entries como iterable
+            document.write("<br/>Codigo, etiqueta del mapa mapCoche, mediante entries como iterable<br/>");
+            for (let coche of mapCoche.entries()){
+                document.write(coche[0] + " - " + coche[1] + "<br/>");
+            };
+
+            //Visualizacion de los coche (codigo, etiqueta) del mapa mapCoche
+            //mediante entries desestructurado
+            document.write("<br/>Codigo, etiqueta del mapa mapCoche, mediante entries desestructurado<br/>");
+            for (let [clave, valor] of mapCoche.entries()){
+                document.write(clave + " " + valor + "<br/>");
+            };
+
+            //Visualizacion del numero de coches presentados en el mapa mapCoches
+            document.write("<br/>Numero de coches del mapa mapCoche: " + mapCoche.size)
+
+            //Definicion de set JS y visualizacion de su contenido
+            document.write("<h3>Set JS<h3/>")
+            document.write("===========================================================")
+            //Definicion de set JS de coches
+            let setCoche = new Set(["Porche 911", "Ferrari Testarosa", "BMW M5", "BMW M5"]);
+
+            //Se agrega un nuevo coche
+            setCoche.add("BMW IX");
+
+            //Visualizacion del contenido del set setCoche
+            document.write("<br/>contenido del set setCoche: <br/>");
+            for (coche of setCoche){
+                document.write(coche + "<br/>");
+            };
+            //Visualizacion del numero de coches presentados en el set setCoche
+            document.write("Numero de coches del set setCoche: " + setCoche.size);
+
         </script>
 
     </font>

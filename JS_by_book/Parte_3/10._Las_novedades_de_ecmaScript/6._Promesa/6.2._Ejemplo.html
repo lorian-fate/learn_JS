@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScript 6: Uso de las promesas</h3>
+
+        <script>
+            //definicion de una promesa
+            //Nota: la promesa consiste en comprobar la velocidad alcanzada por dos coches deportivos
+            //en 5 segundos
+            //Nota: El coche ganador se escogerá aleatoriamente con Math.random(que devuelve una respuesta 
+            //de entre 0 y 1)
+            document.write("arranque de los coches");
+            document.write("<br/>Porche 911 vs Ferrari Testarosa<br/>");
+            var miPromesa = new Promise(function(resolve, reject){
+                //retardo de 5 segundos
+                setTimeout(function(){
+                    //se escoge aleatoriamente el coche mas rapido
+                    if (Math.random() > 0.5){
+                        //Porche 911
+                        //Nota: La eleccion de situar ese coche en caso de resolve es arbitraria
+                        resolve("El Porche 911 es el más rápido");
+                    }
+                    else{
+                        //Ferrari Testarosa
+                        //Nota: la eleccion de situar ese coche en caso de reject es arbitraria
+                        reject("El Ferrari Testarosa es el más rárpido");
+                    }
+                }, 5000)
+            });
+            //Visualizacion mientras la promesa no se a tratado(prosesamiento asincrono)
+            document.write("Control de radar tras 5 segundos");
+
+            //Resumen del funcionamiento de la promesa
+            miPromesa
+                .then(function(veredicto){
+                    //Caso Porche 911
+                    alert("veredicto: " + veredicto);
+                })
+                .catch(function(veredicto){
+                    //caso Ferrari Testarosa
+                    alert("veredicto: " + veredicto)
+                })
+        </script>
+
+    </font>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Funcion de comprobacion de entrada
+        function noVacio(campo, mensajeAlerta){
+            if (campo.value.length == 0){
+                //Mostrar un mensaje de alerte
+                alert(mensajeAlerta);
+                //foco en el campo con error
+                campo.focus();
+
+                //valor en retorno
+                return false;
+            }
+            //valor en retorno
+            alert("Su nombre es: " + document.getElementById('nombre').value);
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ediciones ENI - FORM_01</h1>
+
+    <form>
+        su nombre (campo obligatorio):
+        <input type="text" id="nombre">
+        <input 
+            type="button" 
+            value="Comprobacion de la entrada de datos" 
+            onclick="noVacio(document.getElementById('nombre'), 'Entrada obligatoria')">
+    </form>
+    
+    <!-- Mostrar el codigo fuente -->
+    <center>
+        <a href="JavaScrpt:window.location='view-source:'+ window.location"></a>
+    </center>
+
+</body>
+</html>

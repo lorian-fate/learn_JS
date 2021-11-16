@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Arial">
+        <h3>EcmaScrip 6: Desestructuracion de tablas y objetos JS</h3>
+
+        <script>
+            //Definicion de una tabla JS de marcas de coches deportivos
+            let marcaCochesDeportivos = ['Porche', 'Ferrari', 'BMW'];
+
+            //primer destructing de la tabla JS marcaCochesDeportivos en variable de memoria
+            let [marca1, marca2, marca3] = marcaCochesDeportivos;
+
+            //visualizaciones de control
+            document.write("Marca nº1: " + marca1 + "<br/>");
+            document.write("Marca nº2: " + marca2 + "<br/>");
+            document.write("Marca nº3: " + marca3 + "<br/>");
+
+            //Segundo destructing de la tabla JS marcaCochesDeportivos en variable de memoria
+            let [marca4, , marca6] = marcaCochesDeportivos;
+
+            //Visualizacion de control
+            document.write("Marca nº4: " + marca4 + "<br/>");
+            document.write("Marca nº6: " + marca6 + "<br/>");
+
+            //definicion de un objeto js porche911
+            let porche911 = {
+                marca: "Porche",
+                modelo: "911"
+            };
+
+            //Destructing del objeto porche911 en variable de memoria
+            let {marca, modelo} = porche911;
+
+            //Visualizacion de control
+            document.write("Marca " + marca + "<br/>");
+            document.write("Modelo " + modelo + "<br/>");
+
+        </script>
+
+
+    </font>
+</body>
+</html>

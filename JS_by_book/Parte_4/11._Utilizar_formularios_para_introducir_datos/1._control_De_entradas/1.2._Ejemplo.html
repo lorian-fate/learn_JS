@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function esNumero(campo, mensajeAlerta){
+            var valoresAceptados = /^[0-9]+$/
+            if (campo.value.match(valoresAceptados)){
+                alert("Ha indicado: " + document.getElementById('numero').value);
+                return true;
+            }
+            else{
+                alert(mensajeAlerta);
+                campo.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Ediciones ENI - FORM_01</h1>
+    <form>
+        Cantidad (Entrada de un numero entero, por favor):
+        <input type="text" id="numero">
+        <input 
+            type="button" 
+            value="Validacion entero" 
+            onclick="esNumero(document.getElementById('numero'), 'Indique un numero entero')">
+    </form>
+</body>
+</html>
