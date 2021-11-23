@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function controlEleccion(campo){
+            for(i=0; i < document.forms.formulario.lista.options.length; i++){
+                if(document.forms.formulario.lista.options[i].selected){
+                    alert("Deporte seleccionado: " + document.forms.formulario.lista.options[i].text)
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="formulario">
+        Deporte Practicado:
+        <select size="7" id="lista" multiple>
+            <optgroup label="Deportes de equipo">
+                <option value="futbol">Futbol</option>
+                <option value="voley">Voley Ball</option>
+                <option value="basketball" selected>Basketball</option>
+            </optgroup>
+            <optgroup label="Deportes Individuales">
+                <option value="golf">Golf</option>
+                <option value="natacion">Natación</option>
+                <option value="tenis">Tenis</option>
+            </optgroup>
+        </select>
+        <input 
+            type="button" 
+            value="Validacion entrada"
+            onclick="controlEleccion(document.getElementById('lista'))">
+    </form>
+</body>
+</html>

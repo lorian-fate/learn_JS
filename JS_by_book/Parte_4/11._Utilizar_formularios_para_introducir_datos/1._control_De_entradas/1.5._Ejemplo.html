@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function esNumero(campo, mensajeAlerta){
-            var valoresAceptados = /^[0-9]+$/
-            if (campo.value.match(valoresAceptados)){
-                alert("Ha indicado: " + document.getElementById('numero').value);
+        function longitudEntrada(campo){
+            if (campo.value.length >= 5 && campo.value.length <= 10){
+                alert("El valor: '" + document.getElementById('valores').value + "' es correcto");
                 return true;
             }
             else{
-                alert(mensajeAlerta);
+                alert("El valor: '" + document.getElementById('valores').value + "'no es correcto");
                 campo.focus();
                 return false;
             }
@@ -21,14 +20,14 @@
     </script>
 </head>
 <body>
-    <h1>Ediciones ENI - FORM_02</h1>
+    <h1>Ediciones ENI - FORM_04</h1>
     <form>
-        Cantidad (Entrada de un numero entero, por favor):
-        <input type="text" id="numero">
+        Cantidad (entre 5 y 10 caracteres obligatoriamente):
+        <input type="text" id="valores">
         <input 
             type="button" 
             value="Validacion entero" 
-            onclick="esNumero(document.getElementById('numero'), 'Indique un numero entero')">
+            onclick="longitudEntrada(document.getElementById('valores'))">
     </form>
 </body>
 </html>

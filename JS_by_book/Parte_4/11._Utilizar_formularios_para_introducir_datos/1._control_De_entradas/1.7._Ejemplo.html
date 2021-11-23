@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function controlEleccion(campo, sms){
+            if(campo.value == "Su deporte favorito"){
+                alert(sms);
+                campo.focus();
+                return false;
+            }
+            else{
+                alert("Su deporte favorito: " + campo.value);
+                return true;
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Ediciones ENI - FORM_07</h1>
+    <form action="">
+        deporte que practica:
+        <select id="lista">
+            <option>Su deporte favorito</option>
+            <option>Golf</option>
+            <option>Futbol</option>
+            <option>Natacion</option>
+            <option>Tenis</option>
+        </select>
+        <input 
+            type="button"
+            onclick="controlEleccion(document.getElementById('lista'), 'Seleccione un deporte en la lista')"
+            value="Comprobacion de la entrada">
+    </form>
+</body>
+</html>

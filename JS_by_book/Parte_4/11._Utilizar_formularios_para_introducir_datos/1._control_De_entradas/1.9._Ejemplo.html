@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function seleccionarDeporte(mensajeAlerta){
+            /*Recuperaccion de los deportes propuestos en la tabla*/
+            var tabDeportes = document.forms.lista_deportes.deportes;
+            var numeroDeportes = tabDeportes.length;
+            alert("numero deportes: " + numeroDeportes);
+            if (numeroDeportes > 0){
+                var i = 0;
+                var deporteSeleccionado = false;
+                while(i < numeroDeportes){
+                    //Prueba si el deporte es el seleccionado
+                    if (tabDeportes[i].checked){
+                        alert("Su deporte favorito es: " + tabDeportes[i].value);
+                        deporteSeleccionado = true;
+                    };
+                    i = i + 1;
+                };
+            };
+            //Mensaje de alrta si no se ha seleccionado ningun deporte
+            if (!deporteSeleccionado){
+                alert(mensajeAlerta);
+                return false;
+            }
+            else{
+                return true;
+            }
+            //document.write(tabDeportes);
+        };
+    </script>
+</head>
+<body>
+    <form name="lista_deportes">
+        Deporte Favorito: <br/>
+        <input 
+            type="radio" 
+            value="Golf"
+            name="deportes">
+            Golf
+        </input><br/>
+        <input 
+            type="radio"
+            value="futbol"
+            name="deportes">
+            Futbol
+        </input><br/>
+        <input 
+            type="radio"
+            value="natacion"
+            name="deportes">
+            Natacion
+        </input><br/>
+        <input 
+            type="radio"
+            value="tenis"
+            name="deportes">
+            Tenis
+        </input><br/>
+        <input 
+            type="button"
+            value="comprobacion de entrada"
+            onclick="seleccionarDeporte('Seleccione su deporte')">
+    </form>
+</body>
+</html>

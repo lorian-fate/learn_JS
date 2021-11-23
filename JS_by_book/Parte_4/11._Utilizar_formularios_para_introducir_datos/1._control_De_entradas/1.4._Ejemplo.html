@@ -7,9 +7,9 @@
     <title>Document</title>
     <script>
         function esNumero(campo, mensajeAlerta){
-            var valoresAceptados = /^[0-9]+$/
+            var valoresAceptados = /^[0-9a-zA-Z]+$/
             if (campo.value.match(valoresAceptados)){
-                alert("Ha indicado: " + document.getElementById('numero').value);
+                alert("Ha indicado: " + document.getElementById('alfanumerico').value);
                 return true;
             }
             else{
@@ -21,14 +21,15 @@
     </script>
 </head>
 <body>
-    <h1>Ediciones ENI - FORM_02</h1>
+    <h1>Ediciones ENI - FORM_04</h1>
     <form>
         Cantidad (Entrada de un numero entero, por favor):
-        <input type="text" id="numero">
+        <input type="text" id="alfanumerico">
         <input 
             type="button" 
             value="Validacion entero" 
-            onclick="esNumero(document.getElementById('numero'), 'Indique un numero entero')">
+            onclick="esNumero(document.getElementById('alfanumerico'), 'Indique valores alfanumericos')">
     </form>
+    
 </body>
 </html>
