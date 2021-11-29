@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Formulario número 1:</b>
+    <form id="idForm1" name="form1" method="post">
+        Campo 1: <input type="text" id="campo1" size="20"><br/>
+        Campo 2: <input type="text" id="campo2" size="20"><br/>
+    </form>
+    <br/>
+
+    <b>Formulario número 2:</b>
+    <form id="idForm2" name="form2" method="post">
+        Campo 3: <input type="text" id="campo3" size="20"><br/>
+        Campo 4: <input type="text" id="campo4" size="20"><br/>
+    </form>
+    <br/>
+
+    <b>Formulario número 3:</b>
+    <form id="idForm3" name="form3" method="post">
+        Campo 5: <input type="text" id="campo5" size="20"><br/>
+        Campo 6: <input type="text" id="campo6" size="20"><br/>
+    </form>
+    <br/>
+    
+    <script>
+
+        //Mostrar el número de formularios del documento
+        document.write('Número de formulario(s): ' + document.forms.length + '<br/>');
+
+        //Mostrar el nombre del primer formulario
+        document.write("Nombre del primer formulario: " + document.forms[0].name + '<br/>');
+
+        //Mostrar el identificador del segundo formulario
+        document.write("Identificador del segundo formulario: " + document.forms[1].id);
+
+    </script>
+</body>
+</html>

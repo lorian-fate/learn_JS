@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a name="css">Curso número1 (CSS)</a><br/>
+    <a name="html">Curso número2 (HTML)</a><br/>
+    <a name="xml">Curso número1 (XML)</a><br/>
+
+    <script>
+        document.write("<br/><br/>");
+
+        //Mostrar el numero de anchors del documento
+        document.write("Número de anchor(s) del documento: " + document.anchors.length + '<br/>');
+
+        //Mostrar el titulo del primer anchor del documento
+        document.write("primer anchor del documento: " + document.anchors[0].text + '<br/>');
+
+        //Mostrar el segundo anchor del documento
+        document.write("Segundo anchor del documento: " + document.anchors[1].name + '<br/>')
+    </script>
+</body>
+</html>
